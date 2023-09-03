@@ -251,6 +251,7 @@ body {
 .rgt > img{
   object-fit: cover;
   height: 99%;
+  width: 90%;
   border-radius: 20px;
 }
 .page2 {
@@ -478,14 +479,19 @@ body {
   .hover {
     display: flex;
     flex-direction: column;
+    gap: 1vw;
   }
   .lft,
   .rgt {
     width: 100%;
   }
+  .rgt>img{
+    width: 100%;
+  }
   .page2 {
     display: flex;
     flex-direction: column;
+    gap: 2vw;
   }
   .r,
   .l {

@@ -140,6 +140,7 @@ body {
   }
   .wrapper-l,.wrapper-b,.wrapper-k,.wrapper-m{
     display: flex;flex-direction: column;
+    gap: 2vw;
   }
   #left,#right{
     width: 100%;
