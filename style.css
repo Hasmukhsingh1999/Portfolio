@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+  color: #2d2d2d;
+}
+
+@font-face {
+  font-family: "rawLausanne";
+  src: url(/font/6414424aa927ac3c66b06636_rawLausanne-450.otf);
+}
+
+@font-face {
+  font-family: "GT-Sectra-Book";
+  src: url(/font/6414454b2d9306bdb5002a13_GT-Sectra-Book-Trial.otf);
+}
+/* .loader {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999999999999999;
+}
+.loader img {
+  height: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.drag {
+  position: absolute;
+  bottom: 0;
+  padding: 3vw;
+  left: 50%;
+  z-index: 9999999999;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+.dragbox {
+  width: 40vw;
+  padding: 1.5vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+.dragbox > a {
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1vw;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* .dragbox>a:nth-child(1){
+  border: .9px solid #131313;
+  border-radius: 10px;
+  padding:1vw 2vw;
+  background-color: white;
+  color: black;
+} */
+.main {
+  width: 100%;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 90px;
+}
+
+.logo > h1 {
+  font-family: "GT-Sectra-Book";
+  font-size: 2vw;
+}
+
+.nav-right > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-family: "GT-Sectra-Book";
+  font-size: 1.5vw;
+}
+.nav-right>i{
+  font-size: 2vw;
+}
+.container {
+  width: 100%;
+  height: calc(100vh - 90px);
+  padding: 0 50px;
+  position: relative;
+}
+
+.text-content {
+  font-family: "rawLausanne";
+  padding: 6vw 0;
+  line-height: 0.99;
+}
+
+.text-content > p {
+  font-size: 3vw;
+}
+
+.text-content > h1 {
+  font-size: 10vw;
+  text-transform: capitalize;
+}
+
+.text-content > h2 {
+  font-size: 7vw;
+  font-family: "GT-Sectra-Book";
+}
+
+.page {
+  width: 100%;
+  padding: 20px 50px;
+  /* background-color: red; */
+
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  padding: 2vw;
+  border-top: 0.9px solid #131313;
+  /* border-bottom: .9px solid #131313; */
+}
+
+.left {
+  width: 50%;
+  /* height: inherit; */
+}
+
+.left > h2 {
+  font-size: 4vw;
+  font-family: "rawLausanne";
+}
+
+.right {
+  width: 50%;
+  /* height: inherit; */
+  /* background-color: rebeccapurple; */
+}
+
+.section {
+  height: 70%;
+  /* background-color: yellowgreen; */
+
+  width: 100%;
+}
+
+.section > p {
+  font-family: "rawLausanne";
+  font-size: 2vw;
+}
+
+.view {
+  padding: 1vw;
+}
+
+.view > p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 5.5vw;
+}
+
+.view > p > span {
+  font-family: "rawLausanne";
+}
+
+.page1 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 50px;
+}
+
+.page1 > .wrapper1 {
+  width: 100%;
+  border-top: 0.9px solid #131313;
+  flex-direction: column;
+}
+
+.page1 > .wrapper1 > h1 {
+  font-family: "rawLausanne";
+  padding: 2vw 0;
+  font-size: 3vw;
+}
+
+.hover {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: inherit;
+}
+
+.lft {
+  width: 49%;
+  /* height: 100%; */
+  height: inherit;
+  position: relative;
+}
+
+.rgt {
+  width: 49%;
+  height: inherit;
+  position: relative;
+}
+.li {
+  position: absolute;
+  top: 3%;
+  left: 4%;
+}
+
+.li > a {
+  padding: 12px 22px;
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "rawLausanne";
+  color: #131313;
+  /* border: .9px solid white; */
+}
+.lft > img
+ {
+  width: 100%;
+
+  object-fit: cover;
+  border-radius: 20px;
+}
+.rgt > img{
+  object-fit: cover;
+  height: 99%;
+  border-radius: 20px;
+}
+.page2 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2vw;
+}
+
+.page2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.l {
+  position: relative;
+  width: 49%;
+  /* height: 100%; */
+  height: inherit;
+}
+.r {
+  position: relative;
+  width: 49%;
+  /* height: 100%; */
+  height: inherit;
+}
+.l > img,
+.r > img {
+  width: 100%;
+
+  object-fit: cover;
+  border-radius: 20px;
+}
+.btn {
+  text-align: center;
+  padding: 2vw;
+}
+.btn > a {
+  padding: 12px 22px;
+  border: 0.9px solid #1e1e1e;
+  font-size: 1.5vw;
+  font-family: "rawLausanne";
+  color: rgb(22, 22, 22);
+  text-decoration: none;
+  border-radius: 40px;
+}
+.page3 {
+  width: 100%;
+  min-height: 60vh;
+  padding: 30px 50px;
+}
+
+.page3 > h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+  font-size: 4vw;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 0;
+}
+
+.wr {
+  margin-top: 2vw;
+  height: 100%;
+  width: 100%;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.strip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  /* border-bottom: .9px solid #131313; */
+  border-top: 0.9px solid #131313;
+  padding: 0 20px;
+}
+.strip > h3 {
+  font-family: "GT-Sectra-Book";
+  font-size: 2vw;
+}
+.elem > img {
+  height: 200px;
+  position: absolute;
+  top: -50%;
+  opacity: 0;
+  width: 160px;
+  object-fit: cover;
+  position: absolute;
+  scale: 0;
+  z-index: 1;
+  transition: all linear 0.2s;
+  /* display: none; */
+}
+
+.page4 {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page4 > h1 {
+  font-family: "rawLausanne";
+  font-size: 6vw;
+}
+.page5 {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  /* align-items: flex-end; */
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30vw;
+  gap: 4vw;
+}
+.email > p,
+.linkdin > p,
+.git > p {
+  font-size: 2vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.email > h2,
+.linkdin > h2,
+.git > h2 {
+  font-size: 3vw;
+  font-family: "rawLausanne";
+  cursor: pointer;
+}
+.email > h2:hover,
+.linkdin > h2:hover,
+.git > h2:hover {
+  opacity: 0.2;
+  transition: all ease-in-out;
+}
+.page6 {
+  width: 100%;
+  min-height: 10vh;
+}
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 5%;
+  }
+
+  .logo > h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-right > a {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 25% 5%;
+    width: 100%;
+  }
+
+  .text-content > p {
+    font-size: 1.5rem;
+  }
+
+  .text-content > h1 {
+    font-size: 5rem;
+  }
+
+  .text-content > h2 {
+    font-size: 3rem;
+  }
+
+  .page {
+    padding: 0 5%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .left {
+    width: 100%;
+    height: inherit;
+  }
+
+  .left > h2 {
+    font-family: "rawLausanne";
+    font-size: 15vw;
+  }
+
+  .right {
+    width: 100%;
+    height: inherit;
+  }
+
+  .section > p {
+    font-size: 5vw;
+  }
+
+  .wrapper {
+    padding: 5vw 0;
+  }
+
+  .view {
+    padding: 13vw 0;
+  }
+
+  .view > p {
+    font-size: 9vw;
+  }
+
+  .page1 {
+    padding: 0 5%;
+  }
+
+  .page1 > .wrapper1 > h1 {
+    font-size: 6vw;
+  }
+  .hover {
+    display: flex;
+    flex-direction: column;
+  }
+  .lft,
+  .rgt {
+    width: 100%;
+  }
+  .page2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .r,
+  .l {
+    width: 100%;
+  }
+  .btn > a {
+    padding: 2vw 10vw;
+    font-size: 4vw;
+  }
+  .li {
+    top: 5%;
+  }
+  .page3 > {
+    padding: 20% 5%;
+  }
+  .page3 > h1 {
+    font-size: 13vw;
+  }
+  .wr {
+    margin-top: 15vw;
+  }
+  .strip {
+    height: 50px;
+    padding: 0;
+  }
+  .strip > h3 {
+    font-size: 5vw;
+  }
+  .r-2 {
+    border-bottom: 0.9px solid #131313;
+  }
+  .page4 {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .page4 > h1 {
+    font-size: 16vw;
+  }
+  .page5 {
+    min-height: 30vh;
+    gap: 2vw;
+    padding: 0 15vw;
+  }
+  .email,
+  .git,
+  .linkdin {
+    text-align: center;
+  }
+  .email > p,
+  .git > p,
+  .linkdin > p {
+    font-size: 7vw;
+  }
+
+  .email > h2,
+  .git > h2,
+  .linkdin > h2 {
+    font-size: 4vw;
+  }
+  .drag {
+    padding: 5vw;
+  }
+  .dragbox {
+    padding: 5vw 3.5vw;
+    width: 75vw;
+  }
+  .dragbox > a {
+    font-size: 3.1vw;
+  }
+  .nav-right>i{
+    font-size: 7vw;
+  }
+}

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+@font-face {
+  font-family: "rawLausanne";
+  src: url(/font/6414424aa927ac3c66b06636_rawLausanne-450.otf);
+}
+
+@font-face {
+  font-family: "GT-Sectra-Book";
+  src: url(/font/6414454b2d9306bdb5002a13_GT-Sectra-Book-Trial.otf);
+}
+:root {
+  --primart: "rawLausanne";
+  --secondart: "GT-Sectra-Book";
+  --color: #2d2d2d;
+}
+.main {
+  width: 100%;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+}
+.section1,
+.section2,
+.section3,
+.section4 {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.work {
+  padding: 10vw 5vw;
+  font-family: var(--primart);
+}
+.work > h1 {
+  font-size: 6vw;
+  color: var(--color);
+}
+#para {
+  width: 55vw;
+}
+#para > p {
+  font-size: 3vw;
+  color: var(--color);
+}
+
+.wrapper-l {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3vw;
+}
+
+#left {
+  width: 49%;
+  height: 100%;
+  position: relative;
+}
+#left > img,
+#right > img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#right {
+    position: relative;
+  width: 49%;
+  height: 100%;
+}
+
+.wrapper-b {
+  padding: 0 3vw;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-k {
+  padding:  3vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.li1{
+    position: absolute;
+    top: 5%;
+    left: 4%
+}
+
+.li1>a{
+    padding: 12px 22px;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "rawLausanne";
+    color: #131313;
+}
+
+.wrapper-m{
+    padding:0 3vw;
+}
+
+@media (max-width: 768px){
+  .nav {
+    padding: 0 5%;
+  }
+
+  .logo > h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-right > a {
+    font-size: 1rem;
+  }
+  .home{
+    min-height: 50vh;
+  }
+  .work>h1{
+    font-size: 10vw;
+  }
+  #para{
+    width: 100%;
+  }
+  #para>p{
+    font-size: 5vw;
+  }
+  .wrapper-l,.wrapper-b,.wrapper-k,.wrapper-m{
+    display: flex;flex-direction: column;
+  }
+  #left,#right{
+    width: 100%;
+  }
+  .page4{
+    text-align: center;
+  }
+  .page4>h1{
+    font-size: 10vw;
+  }
+}

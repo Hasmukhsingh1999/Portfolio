@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+  }
+  
+  @font-face {
+    font-family: "rawLausanne";
+    src: url(/font/6414424aa927ac3c66b06636_rawLausanne-450.otf);
+  }
+  
+  @font-face {
+    font-family: "GT-Sectra-Book";
+    src: url(/font/6414454b2d9306bdb5002a13_GT-Sectra-Book-Trial.otf);
+  }
+  :root {
+    --primart: "rawLausanne";
+    --secondart: "GT-Sectra-Book";
+    --color: #2d2d2d;
+  }
+  .main {
+    width: 100%;
+  }
+
+  .wh>h1{
+    font-family: var(--primart);
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  .secti{
+    
+        width: 100%;
+        min-height: 50vh;
+        padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .secti>h2{
+    font-size: 2vw;
+    font-family: var(--primart);
+  }
+  .secti>p{
+    font-size: 3.5vw;
+    text-align: center;
+    font-family: var(--primart);
+    font-weight: 600;
+  }
+
+  .txt{
+    margin-top: 2vw;
+    padding: 0 15vw;
+    text-align: center;
+    font-family: var(--primart);
+  }
+  .txt>p{
+    font-size: 1.5vw;
+  }
+
+  @media (max-width: 768px) {
+    .secti
+    {
+        min-height: 66vh;
+    }
+    .sect>p{
+        font-size: 4vw;
+    }
+   .secti>h2{
+    font-size: 4.5vw;
+   }
+   .secti>p{
+    font-size: 6vw;
+    padding: 0;
+   }
+   .txt{
+padding: 0;
+   }
+   .txt>p{
+    font-size: 4vw;
+   
+
+   }
+  }

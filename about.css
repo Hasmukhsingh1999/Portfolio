@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+  color: #2d2d2d;
+}
+
+@font-face {
+  font-family: "rawLausanne";
+  src: url(/font/6414424aa927ac3c66b06636_rawLausanne-450.otf);
+}
+
+@font-face {
+  font-family: "GT-Sectra-Book";
+  src: url(/font/6414454b2d9306bdb5002a13_GT-Sectra-Book-Trial.otf);
+}
+:root {
+  --primart: "rawLausanne";
+  --secondart: "GT-Sectra-Book";
+  --color: #2d2d2d;
+}
+.main {
+  width: 100%;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+}
+.intro {
+  padding: 4vw;
+  width: 100%;
+}
+.intro > h1 {
+  font-size: 7vw;
+  font-family: var(--primart);
+}
+.intro > p {
+  font-family: var(--primart);
+  font-size: 2vw;
+  width: 50vw;
+}
+
+#intro-pa {
+  width: 100%;
+  margin-top: 4vw;
+  display: flex;
+  justify-content: flex-end;
+}
+#intro-pa > p {
+  font-family: var(--primart);
+  font-size: 2vw;
+  width: 50vw;
+}
+
+.edu {
+  padding: 4vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.edu > h3 {
+  font-family: var(--primart);
+  font-size: 7vw;
+}
+.edu > p {
+  font-family: var(--primart);
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 3vw;
+}
+
+@media (max-width: 768px) {
+  .intro > h1 {
+    font-size: 12vw;
+  }
+
+  .intro > p {
+    margin-top: 4vw;
+    font-size: 4vw;
+    width: 70%;
+  }
+  #intro-pa>p{
+    font-size: 4vw;
+    margin-top: 2vw;
+    width: 70%;
+  }
+  .edu>h3{
+    font-size: 11vw;
+  }
+  .edu>p{
+    font-size: 4vw;
+    text-align: start;
+  }
+}
